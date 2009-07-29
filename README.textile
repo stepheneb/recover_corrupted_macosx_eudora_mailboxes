@@ -4,7 +4,7 @@ Sometimes when Eudora crashes when downloading files some of the mailbox files g
 
 Here's an example of what this type of corruption looks like:
 
-!images/corrupted_eudora_message.png!
+!raw/master/images/corrupted_eudora_message.png!
 
 This corruption often extends through many messages in a mailbox.
 
