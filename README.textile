@@ -13,17 +13,17 @@ try to recreate an uncorrupted version of the mailbox.
 
 After downloading the program you can run it as follows:
 
-bc.
-# cd to the directpry where the corrupted Eudora mailbox files is located
-ruby <path_to_recover_mailbox.rb> <corrupted_eudora_mailbox>
+    # cd to the directory where the corrupted Eudora mailbox files is located
+    <path_to_ruby> <path_to_recover_mailbox.rb> <corrupted_eudora_mailbox>
+
+On Mac OS X the default system ruby is located here: /usr/bin/ruby
 
 Example:
 
-bc.
-[~]$ cd ~/Documents/Eudora\ Folder\ \(stephen\)/Mail\ Folder/
-[Mail Folder]$ /usr/bin/ruby /Users/stephen/dev/ruby/src/lib/recover_corrupted_macosx_eudora_mailboxes/recover_mailbox.rb In
-Making backup copy of In to ./In-backup.
-Reading 6330 messages from original Eudora mailbox: In.
-Writing into new Eudora mailbox: ./In-2.
-Replacing original Eudora mailbox: In with: ./In-2.
-A copy of the original Eudora mailbox: In is now named: ./In-backup.
+    [~]$ cd ~/Documents/Eudora\ Folder\ \(stephen\)/Mail\ Folder/
+    [Mail Folder]$ /usr/bin/ruby /Users/stephen/dev/ruby/src/lib/recover_corrupted_macosx_eudora_mailboxes/recover_mailbox.rb In
+    Making backup copy of In to ./In-backup.
+    Reading 6330 messages from original Eudora mailbox: In.
+    Writing into new Eudora mailbox: ./In-2.
+    Replacing original Eudora mailbox: In with: ./In-2.
+    A copy of the original Eudora mailbox: In is now named: ./In-backup.
