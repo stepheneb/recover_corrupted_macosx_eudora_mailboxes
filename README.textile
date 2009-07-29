@@ -1,0 +1,16 @@
+h1. Recover corrupted Eudora mailbox files on Mac OS X
+
+Sometimes when Eudora crashes when downloading files some of the mailbox files get corrupted.
+
+Here's an example of what this type of corruption looks like:
+
+!corrupted_eudora_message.png!
+
+This corruption often extends through many messages in a mailbox.
+
+The Ruby program recover_mailbox.rb will make a backup of a corrupted Eudora mailbox file and then 
+try to recreate an uncorrupted version of the mailbox.
+
+After downloading the program you can run it as follows:
+
+ruby recover_mailbox.rb <path_to_corrupted_eudora_mailbox>
