@@ -13,6 +13,8 @@ try to recreate an uncorrupted version of the mailbox.
 
 After downloading the program you can run it as follows:
 
+h3. First quit Eudora.
+
 <pre><code>
 # cd to the directory where the corrupted Eudora mailbox files is located
 path_to_ruby_executable path_to_recover_mailbox.rb corrupted_eudora_mailbox
