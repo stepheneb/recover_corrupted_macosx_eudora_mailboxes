@@ -24,11 +24,11 @@ def files_exist_and_same_length(file1, file2)
 end
 
 def get_macos_file_creator(path)
-  `/Developer/Tools/GetFileInfo -c #{path}`.strip.gsub('"', '')
+  `/Developer/Tools/GetFileInfo -c '#{path}'`.strip.gsub('"', '')
 end
 
 def get_macos_file_type(path)
-  `/Developer/Tools/GetFileInfo -t #{path}`.strip.gsub('"', '')
+  `/Developer/Tools/GetFileInfo -t '#{path}'`.strip.gsub('"', '')
 end
 
 def eudora_mailbox_file?(path)
@@ -37,7 +37,7 @@ end
 
 def set_eudora_file_type_attributes(dir, mailbox)
   Dir.chdir(dir) do
-    `/Developer/Tools/SetFile -t TEXT -c CSOm #{mailbox}`
+    `/Developer/Tools/SetFile -t TEXT -c CSOm '#{mailbox}'`
   end
 end
 
