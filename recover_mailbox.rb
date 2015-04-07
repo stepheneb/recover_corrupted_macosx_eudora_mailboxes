@@ -57,7 +57,7 @@ def recover_eduora_mailbox_file(mailbox_path)
   
   raise "Problem backing up: #{mailbox}" unless files_exist_and_same_length(mailbox_path, backup_mailbox_path)
   
-  mbx = File.read(backup_mailbox_path)
+  mbx = File.binread(backup_mailbox_path)
   mbx_messages = mbx.split('From ???@??? ')
   mbx_messages.shift
 
