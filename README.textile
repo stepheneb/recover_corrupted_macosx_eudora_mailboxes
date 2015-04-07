@@ -1,4 +1,6 @@
-h1. Recover corrupted Eudora mailbox files on Mac OS X
+h1. Recover corrupted Eudora mailbox files and report on number of messages in mailboxes
+
+h2. Recover corrupted Eudora mailbox files on Mac OS X
 
 Sometimes when Eudora crashes when downloading files some of the mailbox files get corrupted.
 
@@ -8,7 +10,7 @@ Here's an example of what this type of corruption looks like:
 
 This corruption often extends through many messages in a mailbox.
 
-The Ruby program recover_mailbox.rb will make a backup of a corrupted Eudora mailbox file and then 
+The Ruby program recover_mailbox.rb will make a backup of a corrupted Eudora mailbox file and then
 try to recreate an uncorrupted version of the mailbox.
 
 After downloading the program you can run it as follows:
@@ -32,4 +34,39 @@ Reading 6330 messages from original Eudora mailbox: In.
 Writing into new Eudora mailbox: ./In-2.
 Replacing original Eudora mailbox: In with: ./In-2.
 A copy of the original Eudora mailbox: In is now named: ./In-backup.
+</code></pre>
+
+h2. Report on number of messages in each Eudora mailbox
+
+Eudora has a limit on 32767 messages in a mailbox and exceeding this value will cause errors. It is helpful to archive
+or delete messages before exceeding this limit.
+
+Running mailbox-report.rb will list all mailboxes and the number of messages they contain. At the end of the process a list of all the mailboxes that contain more than 25000 messages will be repeated.
+
+Example:
+
+<pre><code>
+$ mailbox-report.rb /Users/stephen/Documents/Eudora\ Folder/Mail\ Folder/
+
+processing: 777 mailboxes in path: /Users/stephen/Documents/Eudora Folder/Mail Folder/ ...
+
+    count   messages  path
+-----------------------------------------------
+       1        23    0-lmts/aws        
+       2         8    0-lmts/lab-travis 
+       3       203    1-github/1-lab.github
+
+...
+
+     775       175    phone-numbers     
+     776        23    saved-bt          
+     777         0    Trash             
+
+9 mailbox files with more than 25000 messages ...
+
+    messages    path
+-----------------------------------------------
+     25249      3-lists/rails/rails-archive/rails-07-2
+     25678      9-personal/1-lists/f-boats-07-08
+
 </code></pre>
